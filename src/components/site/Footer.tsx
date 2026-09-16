@@ -8,7 +8,7 @@ export function Footer() {
     <footer className="border-t border-primary-foreground/10 bg-ink">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr] lg:px-8">
         <div>
-          <img src={logo} alt="Australian eBook Publishers" className="h-14 w-auto" />
+          <img src={logo} alt="Australian eBook Publishers" className="h-auto" />
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-primary-foreground/65">
             An Australian publishing house for authors who want their book made properly — edited,
             designed, printed and put in front of real readers.
@@ -46,21 +46,21 @@ export function Footer() {
             <li className="flex items-start gap-3">
               <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
               <a href="tel:+61000000000" className="transition-colors hover:text-primary">
-                +61 (0)0 0000 0000
+                +61 (3) 9022 1836
               </a>
             </li>
             <li className="flex items-start gap-3">
               <Mail className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-              <a href="mailto:hello@example.com" className="transition-colors hover:text-primary">
-                hello@example.com
+              <a href="mailto:info@australianebookpublishers.au" className="transition-colors hover:text-primary">
+                info@australianebookpublishers.au
               </a>
             </li>
             <li className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
               <span>
-                Street address placeholder
+                42/Corner of Collins Street & Queen Street, 
                 <br />
-                City, State, Australia
+                Melbourne VIC 3000, Australia
               </span>
             </li>
           </ul>

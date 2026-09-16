@@ -13,7 +13,13 @@ import {
   TickList,
 } from "./Sections";
 
-export function ServicePage({ service }: { service: Service }) {
+export function ServicePage({
+  service,
+  bookCovers = [],
+}: {
+  service: Service;
+  bookCovers?: string[];
+}) {
   const others = services.filter((s) => s.path !== service.path).slice(0, 4);
 
   return (
@@ -77,6 +83,40 @@ export function ServicePage({ service }: { service: Service }) {
           </div>
         </div>
       </section>
+
+      {/* Book Cover Gallery */}
+      {bookCovers.length > 0 && (
+        <section className="px-5 py-20 lg:px-8">
+          <div className="mx-auto max-w-6xl">
+            <Reveal>
+              <SectionHeading
+                eyebrow="Our work"
+                title="Book covers that make an impression"
+                lead="Explore a selection of professionally designed book covers created to capture attention and bring every story to life."
+              />
+            </Reveal>
+
+            <div className="mt-12 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
+              {bookCovers.map((cover, index) => (
+                <Reveal key={`${cover}-${index}`} delay={index * 90}>
+                  <div className="group overflow-hidden rounded-2xl border border-border bg-background shadow-[var(--shadow-deep)] transition-transform duration-300 hover:-translate-y-2">
+                    <div className="aspect-[2/3] overflow-hidden">
+                      <img
+                        src={cover}
+                        alt={`Book cover design ${index + 1}`}
+                        width={600}
+                        height={900}
+                        loading="lazy"
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Deliverables */}
       <section className="px-5 py-20 lg:px-8">
