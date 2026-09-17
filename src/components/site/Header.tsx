@@ -98,7 +98,7 @@ export function Header() {
             className="flex items-center gap-2 text-sm font-semibold text-primary transition-opacity hover:opacity-70"
           >
             <Phone className="h-4 w-4" />
-            +61 (0)0 0000 0000
+            +61 3 9022 1836
           </a>
           <Link
             to="/get-a-quote"
