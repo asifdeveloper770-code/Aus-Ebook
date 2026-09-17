@@ -58,9 +58,9 @@ export function Footer() {
             <li className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
               <span>
-                42/Corner of Collins Street & Queen Street, 
+                Level 2, 8 Clunies Ross Court Eight Mile 
                 <br />
-                Melbourne VIC 3000, Australia
+                Plains QLD 4113
               </span>
             </li>
           </ul>
